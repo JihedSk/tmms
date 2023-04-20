@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { base64 } from "../Constant/imageresover";
 import Skeleton from "react-loading-skeleton";
 import { NavLink } from "react-router-dom";
+import TopNavbar from "./Navbar";
 
 const Produits = () => {
   const [data, setData] = useState([]);
@@ -106,7 +107,10 @@ const Produits = () => {
                     {produit.title.substring(0, 12)}...
                   </h5>
                   <p className="card-text lead fw-bold"></p>
-                  <NavLink to={`/Produits/${produit.id}`} className="btn btn-outline-dark">
+                  <NavLink
+                    to={`/Produits/${produit.id}`}
+                    className="btn btn-outline-dark"
+                  >
                     Découvrir
                   </NavLink>
                 </div>
@@ -115,13 +119,13 @@ const Produits = () => {
           );
         })}
       </>
-
     );
   };
 
-
   return (
     <div>
+      <TopNavbar />
+
       <div className="container my-5 py-5">
         <div className="row">
           <div className="col-12 mb-5">
@@ -136,6 +140,5 @@ const Produits = () => {
     </div>
   );
 };
-
 
 export default Produits;

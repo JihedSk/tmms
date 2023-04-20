@@ -8,8 +8,7 @@ export default function TopNavbar() {
   if (isAdminDashboard) {
     return null;
   }
-  if (isClientDashboard){
-  
+  if (isClientDashboard) {
     return null;
   }
 
@@ -38,24 +37,24 @@ export default function TopNavbar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link " to="/Produits">
+              <NavLink className="nav-link " to="/produits">
                 Produits
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link " to="/À propos">
+              <NavLink className="nav-link " to="/apropos">
                 À propos
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link " to="/Contact">
+              <NavLink className="nav-link " to="/contact">
                 Contact
               </NavLink>
             </li>
           </ul>
           <div className="buttons">
             <button className="btn">
-              <NavLink to="/connexion" className="btn btn-outline-dark">
+              <NavLink to="/login" className="btn btn-outline-dark">
                 <i className="fa fa-sign-in me-1"></i> Connexion
               </NavLink>
             </button>
